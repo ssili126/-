@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "通用数据下载",
+    "version": "3.0",
+    "description": "支持通过ctrl+右键点击两次获取XPath路径，比较路径不同，选择本页所有相似路径内容",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_title": "通用数据下载"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
